@@ -17,8 +17,7 @@ int main(){
 	
 	int a, b;
 	cin >> a >> b;
-	int num = countBits(a);
-	int num1 = countBits(b);
-	cout << "Answer: " << (num+num1) << endl;
+	int total = countBits(a) + countBits(b);
+	cout << "Answer: " << total << endl;
 	
 }
