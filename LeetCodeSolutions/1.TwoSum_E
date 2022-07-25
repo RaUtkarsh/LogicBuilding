@@ -1,0 +1,48 @@
+//c++
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> ans;
+        unordered_map<int, int> m;
+        
+        for(int i=0;i<nums.size();i++){
+            if(m.find(target-nums[i]) != m.end()){
+                ans.push_back(i);
+                ans.push_back(m[target-nums[i]]);
+                return ans;
+            }
+            m[nums[i]]=i;
+        }
+        return ans;
+    }
+};
+
+//java
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+       HashMap<Integer,Integer> indexMap = new HashMap<Integer,Integer>();
+        for(int i = 0; i < nums.length; i++){
+            Integer remaining = (Integer)(target - nums[i]);
+            if(indexMap.containsKey(remaining)){
+                int toReturn[] = {indexMap.get(remaining), i};
+                return toReturn;
+            }
+
+            indexMap.put(nums[i], i);
+        }
+        return null;
+    }
+}
+
+//python
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        seen = {}
+        for i, val in enumerate(nums):
+            remaining = target - nums[i]
+            if remaining in seen:
+                return (i, seen[remaining])
+            seen[val] = i
