@@ -1,5 +1,5 @@
 //main logic behind this solution is a property of set
-//i.e, set does not allow duplicate values
+//i.e, set and unordered map do not allow duplicate values 
 //compare the sizes if they are same return true else false
 
 class Solution {
