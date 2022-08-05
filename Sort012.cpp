@@ -1,6 +1,12 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
+void sort012(int arr[], int n){
+	sort(arr, arr+n);	
+}
+
+/*
  int partition(int arr[], int start, int end){
 	int pivot = arr[start];
 	
@@ -51,7 +57,7 @@ int printArray(int arr[], int n){
 	}
 	cout << endl;
 }
-
+*//
 int main(){
 	
 	int arr[9] = {0, 1, 2, 2, 1, 0, 1, 2, 0};
