@@ -8,6 +8,9 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
 */
+
+// 1st approach 
+// output as array
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
@@ -19,5 +22,26 @@ public:
         }
         return ans[ans.size() / 2];
         
+    }
+};
+
+
+//2nd approach
+//two pointers
+
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        
+        ListNode* s = head;
+        ListNode* f = head;
+        
+        while(f != NULL && f -> next != NULL){
+            
+            s = s -> next;
+            f = f -> next -> next;
+        }
+        return s;
     }
 };
