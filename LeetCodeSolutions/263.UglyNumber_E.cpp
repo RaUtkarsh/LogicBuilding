@@ -1,10 +1,13 @@
 class Solution {
 public:
     bool isUgly(int n) {
+        
+        //base class
         if(n == 0) return false;
         
         if(n == 1) return true;
         
+        //recursion
         if(n % 2 == 0){
             return isUgly(n/2);
         }
