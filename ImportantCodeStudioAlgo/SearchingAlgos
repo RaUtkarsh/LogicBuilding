@@ -1,0 +1,30 @@
+Linear Search
+
+PseudoCode:
+  for index = 0 to n-1
+
+  if arr[index] == target: return index
+
+  else: return -1
+  
+Time Complexity - O(n)
+Space Complexity - O(1)
+
+
+Binary Search
+
+PseudoCode:
+  start = 0, end = n-1
+  
+  while s <= n // if array has only one element
+    mid = start + (end - start)/2
+    if arr[mid] == target: return mid; 
+    
+    if arr[mid] > target: end = mid - 1;
+    
+    if arr[mid] < target: start = mid + 1;
+    
+    else: return -1
+    
+  Time Complexity - O(log n)
+  Space Complexity - O(1)
