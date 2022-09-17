@@ -50,6 +50,9 @@ Node* sortList(Node *head)
 }
 
 
+//Time Complexity: O(n)
+//Space Complexity: O(1)
+
 //Another approach
 //sort without swapping the data
 
@@ -101,3 +104,5 @@ Node* sortList(Node *head)
     
     return head;
 }
+// Time Complexity: O(n)
+//Space Complexity: O(1)
