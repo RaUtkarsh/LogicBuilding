@@ -20,9 +20,7 @@ public:
 class Solution {
 public:
     bool isMirror(TreeNode* left, TreeNode* right){
-        if(!left && !right) return true;
-        if(!left && right) return false;
-        if(left && !right) return false;
+        if(left == NULL || right == NULL) return left == right;
 
         if(left -> val != right -> val) return false;
 
